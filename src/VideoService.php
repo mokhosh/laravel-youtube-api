@@ -126,7 +126,7 @@ class VideoService extends AuthService {
 			 * video status ["public", "private", "unlisted"]
 			 */
 			$status = new \Google_Service_YouTube_VideoStatus();
-			$status->privacyStatus = $data['video_status'];
+			$status->privacyStatus = $data['video_status'] ?? 'unlisted';
 
 			/**
 			 * snippet and status [link with new video resource.]
