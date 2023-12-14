@@ -22,7 +22,7 @@ Mokhosh\LaravelYoutubeApi\LaravelYoutubeApiServiceProvider::class
 
 Execute the following command to get the configurations:
 ```shell
-php artisan vendor:publish --tag='youtube-config'
+php artisan vendor:publish --tag='youtube-api'
 ```
 
 ## Steps to create your google oauth credentials:
