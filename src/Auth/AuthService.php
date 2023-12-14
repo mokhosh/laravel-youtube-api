@@ -1,6 +1,6 @@
 <?php
 
-namespace alchemyguy\YoutubeLaravelApi\Auth;
+namespace Mokhosh\YoutubeLaravelApi\Auth;
 
 use Exception;
 

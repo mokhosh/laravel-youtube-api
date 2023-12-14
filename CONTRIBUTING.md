@@ -2,7 +2,7 @@
 
 Contributions are **welcome** and will be fully **credited**.
 
-We accept contributions via Pull Requests on [Github](https://github.com/alchemyguy/YoutubeLaravelApi).
+We accept contributions via Pull Requests on [Github](https://github.com/mokhosh/laravel-youtube-api).
 
 
 ## Pull Requests
