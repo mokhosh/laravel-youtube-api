@@ -1,5 +1,5 @@
 {
-    "name": "mokhosh/youtube-laravel-api",
+    "name": "mokhosh/laravel-youtube-api",
     "description": "It is a wrapper over Youtube Api v3 which simplifies functionalities the laravel way.",
     "keywords": ["mokhosh", "YoutubeLaravelApi", "Youtube LiveStream", "php", "Youtube Backup", "Youtube Video", "Youtube Api V3", "laravel", "Oauth", "google api", "Youtube Channel"],
     "homepage": "https://github.com/mokhosh/laravel-youtube-api",
