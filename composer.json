@@ -1,7 +1,7 @@
 {
     "name": "mokhosh/laravel-youtube-api",
     "description": "It is a wrapper over Youtube Api v3 which simplifies functionalities the laravel way.",
-    "keywords": ["mokhosh", "YoutubeLaravelApi", "Youtube LiveStream", "php", "Youtube Backup", "Youtube Video", "Youtube Api V3", "laravel", "Oauth", "google api", "Youtube Channel"],
+    "keywords": ["mokhosh", "LaravelYoutubeApi", "Youtube LiveStream", "php", "Youtube Backup", "Youtube Video", "Youtube Api V3", "laravel", "Oauth", "google api", "Youtube Channel"],
     "homepage": "https://github.com/mokhosh/laravel-youtube-api",
     "license": "MIT",
     "authors": [
@@ -19,12 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mokhosh\\YoutubeLaravelApi\\": "src"
+            "Mokhosh\\LaravelYoutubeApi\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mokhosh\\YoutubeLaravelApi\\": "tests"
+            "Mokhosh\\LaravelYoutubeApi\\": "tests"
         }
     },
     "scripts": {
@@ -39,7 +39,7 @@
         },
         "laravel": {
             "providers": [
-                "Mokhosh\\YoutubeLaravelApi\\YoutubeLaravelApiServiceProvider"
+                "Mokhosh\\LaravelYoutubeApi\\LaravelYoutubeApiServiceProvider"
             ]
         }
     },

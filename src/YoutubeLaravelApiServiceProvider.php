@@ -1,10 +1,10 @@
 <?php
 
-namespace Mokhosh\YoutubeLaravelApi;
+namespace Mokhosh\LaravelYoutubeApi;
 
 use Illuminate\Support\ServiceProvider;
 
-class YoutubeLaravelApiServiceProvider extends ServiceProvider {
+class LaravelYoutubeApiServiceProvider extends ServiceProvider {
 	/**
 	 * Perform post-registration booting of services.
 	 *

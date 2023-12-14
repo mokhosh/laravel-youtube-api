@@ -1,7 +1,7 @@
 <?php
-namespace Mokhosh\YoutubeLaravelApi;
+namespace Mokhosh\LaravelYoutubeApi;
 
-use Mokhosh\YoutubeLaravelApi\Auth\AuthService;
+use Mokhosh\LaravelYoutubeApi\Auth\AuthService;
 use Exception;
 
 class VideoService extends AuthService {

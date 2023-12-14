@@ -17,7 +17,7 @@ composer require mokhosh/youtube-laravel-api
 
 Add Service provider to config/app.php provider's array:
 ```php
-Mokhosh\YoutubeLaravelApi\YoutubeLaravelApiServiceProvider::class
+Mokhosh\LaravelYoutubeApi\LaravelYoutubeApiServiceProvider::class
 ```
 
 Execute the following command to get the configurations:
@@ -53,7 +53,7 @@ php artisan vendor:publish --tag='youtube-config'
 <?php
 namespace Your\App\NameSpace;
 
-use  Mokhosh\YoutubeLaravelApi\AuthenticateService;	
+use  Mokhosh\LaravelYoutubeApi\AuthenticateService;	
 
 ```
 
@@ -98,7 +98,7 @@ $authResponse['live_streaming_status'] (enabled or disabled)
 <?php
 namespace Your\App\NameSpace;
 
-use  Mokhosh\YoutubeLaravelApi\LiveStreamService;	
+use  Mokhosh\LaravelYoutubeApi\LiveStreamService;	
 ```
 
 - **Creating a Youtube Event**
@@ -192,7 +192,7 @@ $ytEventObj->transitionEvent($authToken, $youtubeEventId, $broadcastStatus);	// 
 <?php
 namespace Your\App\NameSpace;
 
-use  Mokhosh\YoutubeLaravelApi\ChannelService;
+use  Mokhosh\LaravelYoutubeApi\ChannelService;
 ```
 
 - **Channel details By Channel Id**
@@ -284,7 +284,7 @@ $response = $channelServiceObject->updateChannelBrandingSettings($googleToken, $
 <?php
 namespace Your\App\NameSpace;
 
-use  Mokhosh\YoutubeLaravelApi\VideoService;
+use  Mokhosh\LaravelYoutubeApi\VideoService;
 ```
 
 - **List Video By Id**
