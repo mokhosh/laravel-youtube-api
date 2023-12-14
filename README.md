@@ -12,7 +12,7 @@
 ## Installation
  
 ```shell
-composer require mokhosh/youtube-laravel-api
+composer require mokhosh/laravel-youtube-api
 ```
 
 Add Service provider to config/app.php provider's array:
