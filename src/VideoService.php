@@ -115,18 +115,18 @@ class VideoService extends AuthService {
 			 */
 			$snippet = new \Google_Service_YouTube_VideoSnippet();
 
-			$snippet->setTitle($data['title'] ?? '');
-			$snippet->setDescription($data['description'] ?? '');
-			$snippet->setTags($data['tags'] ?? '');
-			$snippet->setCategoryId($data['category_id'] ?? '');
-			$snippet->setDefaultLanguage($data['language'] ?? '');
-			$snippet->setDefaultAudioLanguage($data['audio_language'] ?? '');
+			$snippet->setTitle($data['title'] ?? 'title');
+			$snippet->setDescription($data['description'] ?? null);
+			$snippet->setTags($data['tags'] ?? null);
+			$snippet->setCategoryId($data['category_id'] ?? null);
+			$snippet->setDefaultLanguage($data['language'] ?? null);
+			$snippet->setDefaultAudioLanguage($data['audio_language'] ?? null);
 
 			/**
 			 * video status ["public", "private", "unlisted"]
 			 */
 			$status = new \Google_Service_YouTube_VideoStatus();
-			$status->privacyStatus = $data['video_status'] ?? 'unlisted';
+			$status->privacyStatus = $data['video_status'] ?? 'private';
 
 			/**
 			 * snippet and status [link with new video resource.]
