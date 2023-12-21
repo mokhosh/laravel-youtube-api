@@ -179,7 +179,7 @@ class VideoService extends AuthService {
 			 */
 			$this->client->setDefer(false);
 
-			return $media;
+			return $status;
 	}
 
 	/**
