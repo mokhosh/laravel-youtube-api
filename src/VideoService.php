@@ -89,7 +89,6 @@ class VideoService extends AuthService {
 	 * @return               [boolean]
 	 */
 	public function uploadVideo($googleToken, $videoPath, $data) {
-		try {
 			/**
 			 * [setAccessToken [setting accent token to client]]
 			 */
@@ -180,16 +179,6 @@ class VideoService extends AuthService {
 			 */
 			$this->client->setDefer(false);
 			return true;
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 	/**
