@@ -178,7 +178,8 @@ class VideoService extends AuthService {
 			 * set defer to false [to make other calls after the file upload]
 			 */
 			$this->client->setDefer(false);
-			return true;
+
+			return $media;
 	}
 
 	/**
