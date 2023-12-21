@@ -90,12 +90,6 @@ class VideoService extends AuthService {
 	 */
 	public function uploadVideo($googleToken, $videoPath, $data) {
 		try {
-
-			// if (!isset($data['title']) || !isset($data['description']) || !isset($data['tags']) || !isset($data['category_id']) || !isset($data['video_status'])) {
-			// 	throw new Exception('Not enough data, please provide title, description, tags, category_id and video_status.', 1);
-			// 	return false;
-			// }
-
 			/**
 			 * [setAccessToken [setting accent token to client]]
 			 */
