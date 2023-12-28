@@ -2,7 +2,6 @@
 namespace Mokhosh\LaravelYoutubeApi;
 
 use Mokhosh\LaravelYoutubeApi\Auth\AuthService;
-use Exception;
 
 class VideoService extends AuthService {
 
@@ -13,22 +12,11 @@ class VideoService extends AuthService {
 	 * @return         [description]
 	 */
 	public function videosListById($part, $params) {
-		try {
-
 			$params = array_filter($params);
 
 			$service = new \Google_Service_YouTube($this->client);
+
 			return $service->videos->listVideos($part, $params);
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 	/**
@@ -38,22 +26,11 @@ class VideoService extends AuthService {
 	 * @return         [json object or response]
 	 */
 	public function searchListByKeyword($part, $params) {
-		try {
-
 			$params = array_filter($params);
 
 			$service = new \Google_Service_YouTube($this->client);
+
 			return $service->search->listSearch($part, $params);
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 	/**
@@ -63,22 +40,11 @@ class VideoService extends AuthService {
 	 * @return         [json Object of response]
 	 */
 	public function relatedToVideoId($part, $params) {
-		try {
-
 			$params = array_filter($params);
 
 			$service = new \Google_Service_YouTube($this->client);
+
 			return $service->search->listSearch($part, $params);
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 	/**
@@ -190,8 +156,6 @@ class VideoService extends AuthService {
 	 * @return               [json obj response]
 	 */
 	public function deleteVideo($googleToken, $id, $params = []) {
-		try {
-
 			/**
 			 * [setAccessToken [setting accent token to client]]
 			 */
@@ -206,26 +170,14 @@ class VideoService extends AuthService {
 			$params = array_filter($params);
 
 			$service = new \Google_Service_YouTube($this->client);
+
 			return $service->videos->delete($id, $params);
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 	/*
 	 * [adds like dislike or remove ratiing]
 	 */
 	public function videosRate($googleToken, $id, $rating = 'like', $params = []) {
-
-		try {
-
 			$setAccessToken = $this->setAccessToken($googleToken);
 			if (!$setAccessToken) {
 				return false;
@@ -238,16 +190,6 @@ class VideoService extends AuthService {
 				$id, $rating,
 				$params
 			);
-
-		} catch (\Google_Service_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (\Google_Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-
-		} catch (Exception $e) {
-			throw new Exception($e->getMessage(), 1);
-		}
 	}
 
 }
