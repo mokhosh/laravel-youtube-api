@@ -191,7 +191,7 @@ class VideoService extends AuthService
             return false;
         }
 
-        $service = new Google_Service_YouTube($client);
+        $service = new Google_Service_YouTube($this->client);
 
         $params = array_filter($params);
 
