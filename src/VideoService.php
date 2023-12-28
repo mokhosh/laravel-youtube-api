@@ -186,7 +186,8 @@ class VideoService extends AuthService {
 			$service = new Google_Service_YouTube($client);
 
 			$params = array_filter($params);
-			$response = $service->videos->rate(
+			
+            return $service->videos->rate(
 				$id, $rating,
 				$params
 			);
