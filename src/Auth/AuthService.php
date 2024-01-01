@@ -21,6 +21,8 @@ class AuthService {
 
 		$this->client->setScopes([
 			'https://www.googleapis.com/auth/youtube',
+            'https://www.googleapis.com/auth/youtubepartner',
+            'https://www.googleapis.com/auth/youtube.force-ssl',
 		]);
 
 		$this->client->setAccessType('offline');
