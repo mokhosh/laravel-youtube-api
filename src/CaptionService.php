@@ -35,7 +35,7 @@ class CaptionService extends AuthService
         $caption->setSnippet($snippet);
 
         return $youtube->captions->insert(
-            "status,snippet",
+            "snippet",
             $caption,
             [
                 'data' => file_get_contents($captionPath),
